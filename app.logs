@@ -1,0 +1,141 @@
+2024-07-28 01:41:20,964 - INFO - Current working directory is: C:\Users\shogu\OneDrive\Desktop\Data Engineering\FY_Data_analysis
+2024-07-28 01:41:20,964 - INFO - Available functions in util: ['__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'clear_logs', 'log_info', 'logging', 'os', 'set_up_logging']
+2024-07-28 01:41:20,965 - INFO - ['.venv', 'app.logs', 'config.json', 'Data_Dictionary.csv', 'data_load.py', 'DDL', 'FY_2024_25.xlsx', 'script.py', 'Sql_Analysis', 'util.py', '__pycache__']
+2024-07-28 01:41:21,045 - INFO - Connection Established Successfully!!
+2024-07-28 01:41:21,055 - INFO - Schema Check : ('finance_insights_stg',)
+2024-07-28 01:41:21,055 - INFO - Schema 'finance_insights_stg' already exists !!
+2024-07-28 01:41:21,056 - INFO - C:/Users/shogu/OneDrive/Desktop/Data Engineering/FY_Data_analysis\FY_2024_25.xlsx
+2024-07-28 01:41:21,461 - INFO - sheets found : ['April_2024', 'May_2024', 'June_2024', 'July_2024', 'August_2024']
+2024-07-28 01:41:21,483 - INFO - Reading Sheet : April_2024
+2024-07-28 01:41:21,492 - INFO - File has been saved as :april_2024.csv 
+2024-07-28 01:41:21,507 - INFO - Executing Drop DDL query: DROP TABLE finance_insights_stg.april_2024;
+2024-07-28 01:41:21,508 - INFO - Columsdef are ['expense_tracker VARCHAR(200)', 'expected_budget FLOAT', 'amount INTEGER', 'payment_status VARCHAR(200)', 'category VARCHAR(200)', 'transaction_type VARCHAR(200)', 'record_date TIMESTAMP']
+2024-07-28 01:41:21,508 - INFO - Creating table with query: CREATE TABLE IF NOT EXISTS finance_insights_stg.april_2024 (expense_tracker VARCHAR(200), expected_budget FLOAT, amount INTEGER, payment_status VARCHAR(200), category VARCHAR(200), transaction_type VARCHAR(200), record_date TIMESTAMP);
+2024-07-28 01:41:21,518 - INFO - DDL of Table april_2024 Created Successfully!!
+2024-07-28 01:41:21,518 - INFO - #########################
+2024-07-28 01:41:21,538 - INFO - Reading Sheet : May_2024
+2024-07-28 01:41:21,540 - INFO - File has been saved as :may_2024.csv 
+2024-07-28 01:41:21,546 - INFO - Executing Drop DDL query: DROP TABLE finance_insights_stg.may_2024;
+2024-07-28 01:41:21,546 - INFO - Columsdef are ['expense_tracker VARCHAR(200)', 'expected_budget FLOAT', 'amount FLOAT', 'payment_status VARCHAR(200)', 'category VARCHAR(200)', 'transaction_type VARCHAR(200)', 'record_date TIMESTAMP']
+2024-07-28 01:41:21,546 - INFO - Creating table with query: CREATE TABLE IF NOT EXISTS finance_insights_stg.may_2024 (expense_tracker VARCHAR(200), expected_budget FLOAT, amount FLOAT, payment_status VARCHAR(200), category VARCHAR(200), transaction_type VARCHAR(200), record_date TIMESTAMP);
+2024-07-28 01:41:21,552 - INFO - DDL of Table may_2024 Created Successfully!!
+2024-07-28 01:41:21,552 - INFO - #########################
+2024-07-28 01:41:21,570 - INFO - Reading Sheet : June_2024
+2024-07-28 01:41:21,573 - INFO - File has been saved as :june_2024.csv 
+2024-07-28 01:41:21,579 - INFO - Executing Drop DDL query: DROP TABLE finance_insights_stg.june_2024;
+2024-07-28 01:41:21,579 - INFO - Columsdef are ['expense_tracker VARCHAR(200)', 'expected_budget FLOAT', 'amount FLOAT', 'payment_status VARCHAR(200)', 'category VARCHAR(200)', 'transaction_type VARCHAR(200)', 'record_date TIMESTAMP']
+2024-07-28 01:41:21,580 - INFO - Creating table with query: CREATE TABLE IF NOT EXISTS finance_insights_stg.june_2024 (expense_tracker VARCHAR(200), expected_budget FLOAT, amount FLOAT, payment_status VARCHAR(200), category VARCHAR(200), transaction_type VARCHAR(200), record_date TIMESTAMP);
+2024-07-28 01:41:21,583 - INFO - DDL of Table june_2024 Created Successfully!!
+2024-07-28 01:41:21,583 - INFO - #########################
+2024-07-28 01:41:21,604 - INFO - Reading Sheet : July_2024
+2024-07-28 01:41:21,607 - INFO - File has been saved as :july_2024.csv 
+2024-07-28 01:41:21,612 - INFO - Executing Drop DDL query: DROP TABLE finance_insights_stg.july_2024;
+2024-07-28 01:41:21,612 - INFO - Columsdef are ['expense_tracker VARCHAR(200)', 'expected_budget FLOAT', 'amount FLOAT', 'payment_status VARCHAR(200)', 'category VARCHAR(200)', 'transaction_type VARCHAR(200)', 'record_date TIMESTAMP']
+2024-07-28 01:41:21,612 - INFO - Creating table with query: CREATE TABLE IF NOT EXISTS finance_insights_stg.july_2024 (expense_tracker VARCHAR(200), expected_budget FLOAT, amount FLOAT, payment_status VARCHAR(200), category VARCHAR(200), transaction_type VARCHAR(200), record_date TIMESTAMP);
+2024-07-28 01:41:21,616 - INFO - DDL of Table july_2024 Created Successfully!!
+2024-07-28 01:41:21,617 - INFO - #########################
+2024-07-28 01:41:21,635 - INFO - Reading Sheet : August_2024
+2024-07-28 01:41:21,640 - INFO - File has been saved as :august_2024.csv 
+2024-07-28 01:41:21,645 - INFO - Executing Drop DDL query: DROP TABLE finance_insights_stg.august_2024;
+2024-07-28 01:41:21,645 - INFO - Columsdef are ['expense_tracker VARCHAR(200)', 'expected_budget FLOAT', 'amount FLOAT', 'payment_status VARCHAR(200)', 'category VARCHAR(200)', 'transaction_type VARCHAR(200)', 'record_date TIMESTAMP']
+2024-07-28 01:41:21,646 - INFO - Creating table with query: CREATE TABLE IF NOT EXISTS finance_insights_stg.august_2024 (expense_tracker VARCHAR(200), expected_budget FLOAT, amount FLOAT, payment_status VARCHAR(200), category VARCHAR(200), transaction_type VARCHAR(200), record_date TIMESTAMP);
+2024-07-28 01:41:21,650 - INFO - DDL of Table august_2024 Created Successfully!!
+2024-07-28 01:41:21,650 - INFO - #########################
+2024-07-28 01:41:21,656 - INFO - The number of columns in df_csv is : 7
+2024-07-28 01:41:21,656 - INFO - The list of columns present in the csv files are  : ['expense_tracker', 'expected_budget', 'amount', 'payment_status', 'category', 'transaction_type', 'record_date']
+2024-07-28 01:41:21,669 - INFO - Number of columns in PostgreSQL table 'finance_insights_stg.august_2024': 7
+2024-07-28 01:41:21,672 - INFO - All columns in PostgreSQL table 'finance_insights_stg.august_2024': ['expense_tracker', 'expected_budget', 'amount', 'payment_status', 'category', 'transaction_type', 'record_date']
+2024-07-28 01:41:21,678 - INFO - Data for april_2024.csv copied successfully
+2024-07-28 01:41:21,679 - INFO - Temporary file C:/Users/shogu/OneDrive/Desktop/Data Engineering/FY_Data_analysis\april_2024.csv has been  deleted successfully
+2024-07-28 01:41:21,679 - INFO - ########################
+2024-07-28 01:41:21,682 - INFO - The number of columns in df_csv is : 7
+2024-07-28 01:41:21,682 - INFO - The list of columns present in the csv files are  : ['expense_tracker', 'expected_budget', 'amount', 'payment_status', 'category', 'transaction_type', 'record_date']
+2024-07-28 01:41:21,684 - INFO - Number of columns in PostgreSQL table 'finance_insights_stg.august_2024': 7
+2024-07-28 01:41:21,688 - INFO - All columns in PostgreSQL table 'finance_insights_stg.august_2024': ['expense_tracker', 'expected_budget', 'amount', 'payment_status', 'category', 'transaction_type', 'record_date']
+2024-07-28 01:41:21,691 - INFO - Data for august_2024.csv copied successfully
+2024-07-28 01:41:21,691 - INFO - Temporary file C:/Users/shogu/OneDrive/Desktop/Data Engineering/FY_Data_analysis\august_2024.csv has been  deleted successfully
+2024-07-28 01:41:21,691 - INFO - ########################
+2024-07-28 01:41:21,694 - INFO - The number of columns in df_csv is : 7
+2024-07-28 01:41:21,694 - INFO - The list of columns present in the csv files are  : ['expense_tracker', 'expected_budget', 'amount', 'payment_status', 'category', 'transaction_type', 'record_date']
+2024-07-28 01:41:21,697 - INFO - Number of columns in PostgreSQL table 'finance_insights_stg.august_2024': 7
+2024-07-28 01:41:21,700 - INFO - All columns in PostgreSQL table 'finance_insights_stg.august_2024': ['expense_tracker', 'expected_budget', 'amount', 'payment_status', 'category', 'transaction_type', 'record_date']
+2024-07-28 01:41:21,703 - INFO - Data for july_2024.csv copied successfully
+2024-07-28 01:41:21,704 - INFO - Temporary file C:/Users/shogu/OneDrive/Desktop/Data Engineering/FY_Data_analysis\july_2024.csv has been  deleted successfully
+2024-07-28 01:41:21,705 - INFO - ########################
+2024-07-28 01:41:21,708 - INFO - The number of columns in df_csv is : 7
+2024-07-28 01:41:21,708 - INFO - The list of columns present in the csv files are  : ['expense_tracker', 'expected_budget', 'amount', 'payment_status', 'category', 'transaction_type', 'record_date']
+2024-07-28 01:41:21,709 - INFO - Number of columns in PostgreSQL table 'finance_insights_stg.august_2024': 7
+2024-07-28 01:41:21,712 - INFO - All columns in PostgreSQL table 'finance_insights_stg.august_2024': ['expense_tracker', 'expected_budget', 'amount', 'payment_status', 'category', 'transaction_type', 'record_date']
+2024-07-28 01:41:21,715 - INFO - Data for june_2024.csv copied successfully
+2024-07-28 01:41:21,715 - INFO - Temporary file C:/Users/shogu/OneDrive/Desktop/Data Engineering/FY_Data_analysis\june_2024.csv has been  deleted successfully
+2024-07-28 01:41:21,715 - INFO - ########################
+2024-07-28 01:41:21,719 - INFO - The number of columns in df_csv is : 7
+2024-07-28 01:41:21,719 - INFO - The list of columns present in the csv files are  : ['expense_tracker', 'expected_budget', 'amount', 'payment_status', 'category', 'transaction_type', 'record_date']
+2024-07-28 01:41:21,723 - INFO - Number of columns in PostgreSQL table 'finance_insights_stg.august_2024': 7
+2024-07-28 01:41:21,725 - INFO - All columns in PostgreSQL table 'finance_insights_stg.august_2024': ['expense_tracker', 'expected_budget', 'amount', 'payment_status', 'category', 'transaction_type', 'record_date']
+2024-07-28 01:41:21,728 - INFO - Data for may_2024.csv copied successfully
+2024-07-28 01:41:21,728 - INFO - Temporary file C:/Users/shogu/OneDrive/Desktop/Data Engineering/FY_Data_analysis\may_2024.csv has been  deleted successfully
+2024-07-28 01:41:21,728 - INFO - ########################
+2024-07-28 01:41:30,517 - INFO - Current working directory is: C:\Users\shogu\OneDrive\Desktop\Data Engineering\FY_Data_analysis
+2024-07-28 01:41:30,517 - INFO - ###############
+2024-07-28 01:41:30,517 - INFO - ############ Data Loding in Progress ##############
+2024-07-28 01:41:30,517 - INFO - Data Integration from finance_insights_stg to finance_insights_int is in progress
+2024-07-28 01:41:30,579 - INFO - ###########all tables
+2024-07-28 01:41:30,588 - INFO - ######Batch loading from finance_insights_stg to finance_insights_int in Progress !!
+2024-07-28 01:41:30,589 - INFO - Fetching all the tables from current schema  : finance_insights_stg 
+2024-07-28 01:41:30,589 - INFO - [('april_2024',), ('may_2024',), ('june_2024',), ('july_2024',), ('august_2024',)]
+2024-07-28 01:41:30,589 - INFO - #############################
+2024-07-28 01:41:30,591 - INFO - Checking if the target table already exists : 
+2024-07-28 01:41:30,592 - INFO - Table finance_insights_int.april_2024 already exists !! 
+2024-07-28 01:41:30,592 - INFO - Dropping off the table
+2024-07-28 01:41:30,594 - INFO - Creating ddl for finance_insights_int.april_2024
+2024-07-28 01:41:30,609 - INFO - Target table : finance_insights_int.april_2024 created successfully !!
+2024-07-28 01:41:30,610 - INFO - Data copied from finance_insights_stg.april_2024 to finance_insights_int.april_2024 successful!!!
+2024-07-28 01:41:30,610 - INFO - Temp table for file_nm insertion
+2024-07-28 01:41:30,610 - INFO - Checking if the temp target table already exists : 
+2024-07-28 01:41:30,616 - INFO - file_nm insertion successfull
+2024-07-28 01:41:30,621 - INFO - Changes made successfully!!
+2024-07-28 01:41:30,621 - INFO - #############################
+2024-07-28 01:41:30,622 - INFO - Checking if the target table already exists : 
+2024-07-28 01:41:30,624 - INFO - Table finance_insights_int.may_2024 already exists !! 
+2024-07-28 01:41:30,624 - INFO - Dropping off the table
+2024-07-28 01:41:30,624 - INFO - Creating ddl for finance_insights_int.may_2024
+2024-07-28 01:41:30,631 - INFO - Target table : finance_insights_int.may_2024 created successfully !!
+2024-07-28 01:41:30,633 - INFO - Data copied from finance_insights_stg.may_2024 to finance_insights_int.may_2024 successful!!!
+2024-07-28 01:41:30,633 - INFO - Temp table for file_nm insertion
+2024-07-28 01:41:30,633 - INFO - Checking if the temp target table already exists : 
+2024-07-28 01:41:30,638 - INFO - file_nm insertion successfull
+2024-07-28 01:41:30,643 - INFO - Changes made successfully!!
+2024-07-28 01:41:30,643 - INFO - #############################
+2024-07-28 01:41:30,644 - INFO - Checking if the target table already exists : 
+2024-07-28 01:41:30,644 - INFO - Table finance_insights_int.june_2024 already exists !! 
+2024-07-28 01:41:30,644 - INFO - Dropping off the table
+2024-07-28 01:41:30,645 - INFO - Creating ddl for finance_insights_int.june_2024
+2024-07-28 01:41:30,653 - INFO - Target table : finance_insights_int.june_2024 created successfully !!
+2024-07-28 01:41:30,654 - INFO - Data copied from finance_insights_stg.june_2024 to finance_insights_int.june_2024 successful!!!
+2024-07-28 01:41:30,654 - INFO - Temp table for file_nm insertion
+2024-07-28 01:41:30,654 - INFO - Checking if the temp target table already exists : 
+2024-07-28 01:41:30,660 - INFO - file_nm insertion successfull
+2024-07-28 01:41:30,664 - INFO - Changes made successfully!!
+2024-07-28 01:41:30,664 - INFO - #############################
+2024-07-28 01:41:30,665 - INFO - Checking if the target table already exists : 
+2024-07-28 01:41:30,666 - INFO - Table finance_insights_int.july_2024 already exists !! 
+2024-07-28 01:41:30,666 - INFO - Dropping off the table
+2024-07-28 01:41:30,666 - INFO - Creating ddl for finance_insights_int.july_2024
+2024-07-28 01:41:30,673 - INFO - Target table : finance_insights_int.july_2024 created successfully !!
+2024-07-28 01:41:30,675 - INFO - Data copied from finance_insights_stg.july_2024 to finance_insights_int.july_2024 successful!!!
+2024-07-28 01:41:30,675 - INFO - Temp table for file_nm insertion
+2024-07-28 01:41:30,675 - INFO - Checking if the temp target table already exists : 
+2024-07-28 01:41:30,680 - INFO - file_nm insertion successfull
+2024-07-28 01:41:30,684 - INFO - Changes made successfully!!
+2024-07-28 01:41:30,684 - INFO - #############################
+2024-07-28 01:41:30,685 - INFO - Checking if the target table already exists : 
+2024-07-28 01:41:30,686 - INFO - Table finance_insights_int.august_2024 already exists !! 
+2024-07-28 01:41:30,686 - INFO - Dropping off the table
+2024-07-28 01:41:30,687 - INFO - Creating ddl for finance_insights_int.august_2024
+2024-07-28 01:41:30,696 - INFO - Target table : finance_insights_int.august_2024 created successfully !!
+2024-07-28 01:41:30,698 - INFO - Data copied from finance_insights_stg.august_2024 to finance_insights_int.august_2024 successful!!!
+2024-07-28 01:41:30,698 - INFO - Temp table for file_nm insertion
+2024-07-28 01:41:30,698 - INFO - Checking if the temp target table already exists : 
+2024-07-28 01:41:30,705 - INFO - file_nm insertion successfull
+2024-07-28 01:41:30,709 - INFO - Changes made successfully!!
