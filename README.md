@@ -1,6 +1,6 @@
 ## Your One-Stop Destination for Managing Budgets and Gaining Financial Insights
 
-This project provides tools and reports to help users analyze their spending, savings, and investments, allowing for more informed financial decisions.
+This project helps users analyze their spending, savings, and investments, allowing for more informed financial decisions.
 
 ### Business Insights Generated from the Monthly Reports
 
