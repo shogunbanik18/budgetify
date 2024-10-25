@@ -41,7 +41,7 @@ This project provides tools and reports to help users analyze their spending, sa
 ![Data Flow](/Data_Flow.png)
 
 #### SOP FOR Running the Code 
-1. DDL and Data Load Excel to STG: python -u "c:\Users\shogu\OneDrive\Desktop\Data Engineering\FY_Data_analysis\script.py"
+1. DDL and Data Load Excel to STG: python -u "path\script.py"
 2. Data Load STG to INT :python data_load.py finance_insights_stg finance_insights_int october_2024
 3. Data Load INT to WRK :python data_load.py finance_insights_int finance_insights_wrk october_2024
 4. Generate Reports using the commands provding month and year as arguments : python Generate_insights.py --month september --year 2024
