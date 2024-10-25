@@ -2,16 +2,19 @@ import pandas as pd
 import os
 import psycopg2
 import util
+import json
 
-# creating the connection parameters
-connection_parameters = {
-    "dbname": "postgres",
-    "user": "postgres",
-    "password": "1809",
-    "host": "localhost",
-    "port": "5432",
-}
+with open("config.json", "r") as config_file:
+    config = json.load(config_file)
 
+    # creating the connection parameters
+    connection_parameters = {
+        "dbname": config["dbname"],
+        "user": config["user"],
+        "password": config["password"],
+        "host": config["host"],
+        "port": config["port"],
+    }
 root_directory = "C:/Users/shogu/OneDrive/Desktop/Data Engineering/FY_Data_analysis"
 print(os.listdir())
 
@@ -74,37 +77,6 @@ try:
                 temp_csv_file = f"{table_name}.csv"
                 df.to_csv(temp_csv_file, index=False)
                 print(f"File has been saved as :{temp_csv_file} ")
-
-                # creating the ddl and loading the data
-    #                 create_table_query = f'create table if not exists {full_table_name} ('
-    #
-    #                 column_definitions = []
-    #                 for cols in df.columns:
-    #                     if pd.api.types.is_integer_dtype(df[cols]):
-    #                         column_type = 'INTEGER'
-    #                     elif pd.api.types.is_datetime64_any_dtype(df[cols]):
-    #                         column_type = 'TIMESTAMP'
-    #                     elif pd.api.types.is_numeric_dtype(df[cols]):
-    #                         column_type = 'NUMERIC'
-    #                     else:
-    #                         column_type = 'TEXT'
-    #
-    #                     # Append column definition to list
-    #                     column_definitions.append(f'"{cols}" {column_type}')
-    #
-    #                 # Join column definitions into the query string
-    #                 create_table_query += ', '.join(column_definitions)
-    #                 create_table_query += ')'
-    #
-    #                 print(f'Creating table with query: {create_table_query}')
-
-    # Execute create table query
-    # curr.execute(create_table_query)
-    # conn.commit()
-
-    # sql1 = f""
-    print("checking")
-
     for file_name in os.listdir(root_directory):
         # if file_name.endswith('.csv') :
         if file_name == "july_2024.csv":
