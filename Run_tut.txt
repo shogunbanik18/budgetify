@@ -1,0 +1,28 @@
+Running the Structure of the file -> initialise excel to stg , stg to int, int to wrk 
+
+1. DDL and Data Load Excel to STG : python -u "c:\Users\shogu\OneDrive\Desktop\Data Engineering\FY_Data_analysis\script.py"
+2. Data Load STG to INT :python data_load.py finance_insights_stg finance_insights_int october_2024
+3. Data Load INT to WRK :python data_load.py finance_insights_int finance_insights_wrk october_2024
+4. Generate Reports using the commands provding month and year as arguments : python Generate_insights.py --month september --year 2024
+
+
+#######################################################
+Business Inghts Generated from Report
+
+1. Savings Rate: Analysis of the percentage of income saved over the reporting period.
+2. Recurring vs Non-Recurring: Comparison of recurring expenses against non-recurring expenses to identify spending patterns.
+3. Expense Efficiency: Evaluation of needs versus wants to determine effective allocation of resources.
+4. Highest Daily Expense: Identification of the day with the highest spending, highlighting potential overspending.
+5. Lowest Daily Expense: Identification of the day with the lowest spending, providing insights into frugal spending habits.
+6. Weekly Expense Analysis: Review of spending trends on a weekly basis to assess overall financial health.
+7. Unexpected Expenses: Tracking of unexpected or overbudget expenses to identify areas for improvement.
+8. Daily Spending Variance: Analysis of daily spending variance from the budget to understand adherence to financial plans.
+9. Opportunity Cost Analysis: Examination of potential returns lost due to spending choices made during the period.
+10. Psychological Spending: Insights into spending behaviors driven by psychological factors, such as stress or social influences.
+11. Needs, Wants, and Investments: Distribution analysis of spending across needs, wants, and investment categories to guide future budgeting.
+12. Pending Payments: Overview of pending payments to manage cash flow effectively.
+13. 1st 15 Days vs Last 15 Days: Comparative analysis of expenses in the first half versus the second half of the month.
+14. Max Expense Category: Identification of the category with the highest expenses and its percentage of total spending.
+15. Top N Expense Categories: Ranking of the top expense categories to prioritize financial planning.
+16. Weekdays vs Weekends: Comparison of spending habits on weekdays versus weekends to identify lifestyle impacts.
+17. Category-wise Distribution by Day Type: Detailed breakdown of spending by category, differentiated by day type (weekdays vs weekends).

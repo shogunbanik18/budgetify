@@ -3,6 +3,7 @@ import sys  # for accessing the command line arguments
 import util
 import os
 import json
+import pandas as pd
 
 with open("config.json", "r") as config_file:
     config = json.load(config_file)
@@ -52,13 +53,16 @@ def load_data(current_schema, target_schema, table_name):
         util.log_info(f"Creating ddl for {target_table}")
         cursor.execute(
             f"""create table if not exists {target_table} as SELECT
-                lower(expense_tracker) AS expense_tracker,
+                lower(expense_category) AS expense_category,
+                lower(expense_description) AS expense_description,
                 COALESCE(expected_budget, 0) AS expected_budget,
-                COALESCE(amount, 0) AS amount,
+                COALESCE(CAST(amount AS INTEGER), 0) AS amount,
                 lower(payment_status) AS payment_status,
-                lower(category) AS category,
+                COALESCE(lower(payment_mode),'upi') AS payment_mode,
+                lower(financial_category) AS financial_category,
                 lower(transaction_type) AS transaction_type,
-                COALESCE(record_date, '2024-07-09 00:00:00.000') AS record_date
+                COALESCE(record_date, '2024-07-31 00:00:00.000') AS record_date,
+                lower(currency) AS currency
             FROM {source_table};"""
         )
         conn.commit()
@@ -147,11 +151,22 @@ if __name__ == "__main__":
         )
         util.log_info(f"{all_tables}")
 
+        if target_schema == "finance_insights_wrk":
+            util.log_info("Storing the views in a temp layer ")
+            cursor.execute("call finance_insights_wrk.store_view_definitions();")
+            util.log_info("Droping the views for proper data load to wrk ")
+            cursor.execute("call finance_insights_wrk.drop_all_views();")
+
         for t1 in all_tables:
             tb = t1[0]
             load_data(current_schema, target_schema, tb)
 
         print("Loading Successfull!!")
+
+        if target_schema == "finance_insights_wrk":
+            util.log_info("Recreating all the views !!")
+            cursor.execute("call finance_insights_wrk.recreate_all_views();")
+            conn.commit()
 
         #######
         # For Single table load Process

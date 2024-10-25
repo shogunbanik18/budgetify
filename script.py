@@ -1,6 +1,6 @@
 import pandas as pd
 import os
-import psycopg2
+import psycopg2  # type: ignore
 import util
 import importlib
 import json
@@ -64,7 +64,8 @@ if __name__ == "__main__":
 
         # Iterating in the root directory
         for file_name in os.listdir(root_directory):
-            if file_name.endswith(".xlsx"):
+            if file_name.endswith(".xlsx") and file_name == "Mock_data_fy_24_25.xlsx":
+                # if file_name.endswith(".xlsx") and file_name == "FY_2024_25.xlsx":
                 excel_file_path = os.path.join(root_directory, file_name)
                 util.log_info(excel_file_path)
 
