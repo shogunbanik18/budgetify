@@ -49,7 +49,15 @@ select *,sum(amount) over(order by file_nm desc) from finance_insights_wrk.q3 wh
 select *,sum(amount) over(order by file_nm desc) from finance_insights_wrk.q3 where finance_insights_wrk.q3.financial_category in ('wants');
 select *,sum(amount) over(order by file_nm desc) from finance_insights_wrk.q3 where finance_insights_wrk.q3.financial_category in ('invest');
 
-q4
+--## q3 end to end analysis 
+select 
+sum(case when financial_category='needs' then amount else 0 end) as total_needs,
+sum(case when financial_category='invest' then amount else 0 end) as total_investment,
+sum(case when financial_category='wants' then amount else 0 end) as total_wants,
+file_nm as file_name
+from finance_insights_wrk.q3 group by file_nm ;
+
+-- q4
 select *,sum(amount) over(order by file_nm desc) from finance_insights_wrk.q4;
 select *,sum(amount) over(order by file_nm desc) from finance_insights_wrk.q4 where finance_insights_wrk.q4.financial_category in ('needs');
 select *,sum(amount) over(order by file_nm desc) from finance_insights_wrk.q4 where finance_insights_wrk.q4.financial_category in ('wants');
