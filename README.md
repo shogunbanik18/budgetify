@@ -2,8 +2,11 @@
 
 This project helps users analyze their spending, savings, and investments, allowing for more informed financial decisions.
 
-### Business Insights Generated from the Monthly Reports
+### Orchestration Schedule
+The Airflow DAG is scheduled to run on the 15th and 28th of every month.
+On each run, it executes the complete data pipeline and generates monthly financial reports accordingly.
 
+### Business Insights Generated from the Monthly Reports
 1.   **Savings Rate**
 2.   **Recurring vs Non-Recurring**
 3.   **Expense Efficiency**
@@ -24,6 +27,10 @@ This project helps users analyze their spending, savings, and investments, allow
 
 ### Data Flow Diagram
 ![image](https://github.com/user-attachments/assets/363e531d-2be0-4f09-b394-244b33183cc5)
+
+### Airflow Orchestration 
+![image](https://github.com/user-attachments/assets/5e55b09d-b8b7-4f5b-b56b-b1b2ceceac78)
+
 
 
 
