@@ -21,7 +21,7 @@ with DAG(
     dag_id='FY_Monthly_dag',
     default_args=default_args,
     description='A simple dummy DAG example',
-    schedule_interval='7 * * * *',
+    schedule_interval='0 0 15,28 * *',
     start_date=start_date, 
     catchup=False,
     tags=['example', 'bash'],
