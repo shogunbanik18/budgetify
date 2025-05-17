@@ -27,12 +27,6 @@ with DAG(
     tags=['example', 'bash'],
 ) as dag:
 
-    def start():
-        print("Starting the pipeline...")
-
-    def end():
-        print("Pipeline finished.")
-
     start_task = BashOperator(
         task_id='start_task',
         bash_command='echo "Starting the pipeline..."'
