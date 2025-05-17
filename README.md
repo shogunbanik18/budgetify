@@ -7,8 +7,7 @@ The Airflow DAG is scheduled to run on the 15th and 28th of every month.
 On each run, it executes the complete data pipeline and generates monthly financial reports accordingly.
 
 ### Airflow Orchestration 
-![image](https://github.com/user-attachments/assets/5e55b09d-b8b7-4f5b-b56b-b1b2ceceac78)
-
+![image](https://github.com/user-attachments/assets/fc007239-6b4e-4de7-88c7-cb213672379e)
 
 ### Business Insights Generated from the Monthly Reports
 1.   **Savings Rate**
@@ -30,7 +29,8 @@ On each run, it executes the complete data pipeline and generates monthly financ
 17.   **Category-wise Distribution by Day Type**
 
 ### Data Flow Diagram
-![image](https://github.com/user-attachments/assets/363e531d-2be0-4f09-b394-244b33183cc5)
+![image](https://github.com/user-attachments/assets/0aea481a-dd28-4a80-883c-0e34d6ce011c)
+
 
 
 
