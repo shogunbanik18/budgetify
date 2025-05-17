@@ -33,9 +33,9 @@ with DAG(
     def end():
         print("Pipeline finished.")
 
-    start_task = PythonOperator(
+    start_task = BashOperator(
         task_id='start_task',
-        python_callable=start,
+        bash_command='echo "Starting the pipeline..."'
     )
 
     Excel_to_L0_Load = BashOperator(
@@ -135,9 +135,9 @@ with DAG(
     bash_command='sleep 60',
     )
 
-    end_task = PythonOperator(
+    end_task = BashOperator(
         task_id='end_task',
-        python_callable=end,
+        bash_command='echo "Ending the pipeline..."'
     )
 
     # send_email = BashOperator(
@@ -158,9 +158,6 @@ with DAG(
 
     # chain(start_task,*task_list,end_task)
 
-    # chain(start_task,*task_list)  # Ensure task_list runs after start_task
-    # chain(*task_list,Reports_Task )  # Ensure reports run in parallel after task_list
-    # chain(Reports_Task, end_task)
     chain(start_task, *task_list)
     chain(*task_list, wait_task)           # Add the wait here
     chain(wait_task, Reports_Task)         # Reports start after wait finishes
