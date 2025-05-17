@@ -23,6 +23,7 @@ This project helps users analyze their spending, savings, and investments, allow
 17.   **Category-wise Distribution by Day Type**
 
 ### Data Flow Diagram
-![image](https://github.com/user-attachments/assets/66ce8d07-aa43-4198-8062-26036ffeb643)
+![image](https://github.com/user-attachments/assets/363e531d-2be0-4f09-b394-244b33183cc5)
+
 
 
